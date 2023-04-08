@@ -1936,67 +1936,27 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
         
     case 'play': case 'ytplay':{
                 if (!text) throw `Example : ${prefix + command} anime whatsapp status`
-                let yts = require("youtube-yts")
-                let search = await yts(text)
-                let anulay = search.videos[Math.floor(Math.random() * search.videos.length)]
-                let buttons = [
-                    {buttonId: `ytad ${anulay.url}`, buttonText: {displayText: '♫ Audio'}, type: 1},
-                    {buttonId: `ytvd ${anulay.url}`, buttonText: {displayText: '► Video'}, type: 1},
-		            {buttonId: `ytdoc ${anulay.url}`, buttonText: {displayText: '► Document'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: anulay.thumbnail },
-                    caption: `
-${themeemoji} Title : ${anulay.title}
-${themeemoji} Ext : Search
-${themeemoji} ID : ${anulay.videoId}
-${themeemoji} Duration : ${anulay.timestamp}
-${themeemoji} Viewers : ${anulay.views}
-${themeemoji} Upload At : ${anulay.ago}
-${themeemoji} Author : ${anulay.author.name}
-${themeemoji} Channel : ${anulay.author.url}
-${themeemoji} Description : ${anulay.description}
-${themeemoji} Url : ${anulay.url}`,
-                    footer: botname,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                NEXUS.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-case 'ytad': case 'getmusic': case 'yt': case 'youtube': case 'ytmp3': case 'ytmusic': case 'ytdl': {
-    reply(` Getting  your 𝗮𝘂𝗱𝗶𝗼 ${pushname}_`)
-    const YT=require('./lib/ytdlcore')
-    let yts = require("youtube-yts")
-    let search = await yts(text)
-    let anu = search.videos[0]
-    const ytmp3play = await YT.mp3(anu.url)
-    let stats = fs.statSync(ytmp3play.path)
-    let fileSizeInBytes = stats.size;
-    if (fileSizeInBytes > 60000000) return reply('Cant send audios longer than 60 MB!')
- NEXUS.sendMessage(from, {audio: fs.readFileSync(ytmp3play.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
- }
- break
-case 'ytdoc': {
-    const YT=require('./lib/ytdlcore')
-    let yts = require("youtube-yts")
-    let search = await yts(text)
-    let anu = search.videos[0]
-    const ytmp3play = await YT.mp3(anu.url)
-    let stats = fs.statSync(ytmp3play.path)
-    let fileSizeInBytes = stats.size;
-    if (fileSizeInBytes > 60000000) return reply('Cant send audios longer than 60 MB!')
- NEXUS.sendMessage(from, {document: fs.readFileSync(ytmp3play.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
- }
- break
- case 'ytvd': case 'getvideo': case 'ytvideo': case 'ytmp4': {
+                reply(` Getting  your 𝗮𝘂𝗱𝗶𝗼 ${pushname}_`)
+    		const YT= require('./lib/ytdlcore')
+    		let yts = require("youtube-yts")
+    		let search = await yts(text)
+    		let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+    		const ytmp3play = await YT.mp3(anu.url)
+    		let stats = fs.statSync(ytmp3play.path)
+    		let fileSizeInBytes = stats.size;
+    		if (fileSizeInBytes > 60000000) return reply('Cant send audios longer than 60 MB!')
+ 		NEXUS.sendMessage(from, {audio: fs.readFileSync(ytmp3play.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
+}
+break
+
+ case 'Payvideo': case 'getvideo': case 'ytvideo': case 'ytmp4': {
     reply(`Getting ready your 𝘃𝗶𝗱𝗲𝗼 ${pushname}_`)
  const YT=require('./lib/ytdlcore')
     let yts = require("youtube-yts")
     let search = await yts(text)
-    let anu = search.videos[0]
+    let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
     const ytmp4play = await YT.mp4(anu.url)
-    let vidduration =ytmp4play.duration;
+    let vidduration = ytmp4play.duration;
     if (vidduration > 1800) return reply('Cant send videos longer than *30 min*')
 NEXUS.sendMessage(from, {video:{url:ytmp4play.videoUrl}, mimetype:"video/mp4", caption:anu.title+` By *${global.BotName} MD*`,}, {quoted:m})
  }

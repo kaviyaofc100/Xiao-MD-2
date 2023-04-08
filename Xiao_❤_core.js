@@ -5119,9 +5119,6 @@ txt += `📖 *Description:* ${anime.description}\n`
 txt += `🌐 *Url:* https://genshin-impact.fandom.com/wiki/${a}\n`
 urll = `https://api.genshin.dev/characters/${a}/portrait`
 await NEXUS.sendMessage(m.chat,{image:{url:urll}, caption:txt},{quoted:m})
-} catch (err) {
-console.log(err)
-throw Lang.error
 }
 break
 case 'anime':{

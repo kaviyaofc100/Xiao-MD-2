@@ -1329,7 +1329,7 @@ let teks = `✧(｡•̀ᴗ-)✧˙♥ ${botname}♥★~(◠ω◕✿) \n\n
             if (m.chat in vote) throw `_There are still votes in this chat!_\n\n*❤️‍🔥${prefix}deletevote* - to delete votes`
             if (!text) throw `Enter Reason for Vote, Example: *${prefix + command} Handsome Owner*`
             m.reply(`Vote dimulai!\n\n*❤️‍🔥${prefix}upvote* - for sure\n*❤️‍🔥${prefix}devote* - for devote\n*❤️‍🔥${prefix}cekvote* - to check the vote\n*❤️‍🔥${prefix}deletevote* - to delete votes`)
-           let  vote[m.chat] = [q, [], []]
+            vote[m.chat] = [q, [], []]
             await sleep(1000)
             let upvote = vote[m.chat][1]
             let devote = vote[m.chat][2]
@@ -1367,7 +1367,7 @@ let teks = `✧(｡•̀ᴗ-)✧˙♥ ${botname}♥★~(◠ω◕✿) \n\n
             let isVote = vote[m.chat][1].concat(vote[m.chat][2])
             let wasVote = isVote.includes(m.sender)
             if (wasVote) throw 'You have Voted'
-            let vote[m.chat][1].push(m.sender)
+            vote[m.chat][1].push(m.sender)
             let menvote = vote[m.chat][1].concat(vote[m.chat][2])
             let teks_vote = `* VOTE *
 
@@ -1403,7 +1403,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
             let isVote = vote[m.chat][1].concat(vote[m.chat][2])
             let wasVote = isVote.includes(m.sender)
             if (wasVote) throw 'You have Voted'
-            let vote[m.chat][2].push(m.sender)
+            vote[m.chat][2].push(m.sender)
             let menvote = vote[m.chat][1].concat(vote[m.chat][2])
             let teks_vote = `* VOTE *
 

@@ -3430,6 +3430,7 @@ NEXUS.sendContact(m.chat, owner, m)
 				 var button = [{ buttonId: `menfesconfirm`, buttonText: { displayText: `CONFIRM‡` }, type: 1 }, { buttonId: `menu`, buttonText: { displayText: `Menu` }, type: 1 }]
 					NEXUS.sendMessage(`${nomor}@s.whatsapp.net`, { caption: teksnya, image: {url: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMkjAJhYezm4h6k1AJ6qfreGkaRdBcR7UHMw&usqp=CAU`}, buttons: button, footer: botname })
 				m.reply(`Success Sending Menfess!!`)
+}
 				break
 			case 'menfesconfirm':{
  				 NEXUS.sendMessage(q, {text: `It's been confirmed, Confess🌹`})

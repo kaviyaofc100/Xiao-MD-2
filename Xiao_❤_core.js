@@ -318,11 +318,12 @@ const hsjdh = randomNomor(5)
 }
 	    
 //////////////////////////////////////////////
-if (!isCmd && !m.isGroup){
+if (!budy){
     const botreply = await axios.get(`http://api.brainshop.ai/get?bid=173534&key=Gnb7EUxsV21uoNMM&uid=[uid]&msg=[${budy}]`)
     let txt = `${botreply.data.cnt}`
     m.reply(txt)
     }
+	    
 // total hit
 global.hit = {}
 if (isCmd) {
@@ -3825,7 +3826,7 @@ case 'sound159':
 case 'sound160':
 case 'sound161': {
 if(!text) throw `example: ${prefix + command} sound 12`
-const NEXUS_dev = await getBuffer(`https://github.com/NEXUSAT12/Tiktokmusic-API/raw/master/tiktokmusic/sound${text}.mp3`)
+const NEXUS_dev = await getBuffer(`https://github.com/NEXUSAT12/Tiktokmusic-API/raw/master/tiktokmusic/${command}.mp3`)
 await NEXUS.sendMessage(m.chat, { audio: NEXUS_dev, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
 }   
 break
@@ -4184,7 +4185,7 @@ case 'dare':{
               const dare =[
     "eat 2 tablespoons of rice without any side dishes, if it's dragging you can drink",
     "spill people who make you pause",
-    "call crush/pickle now and send ss",
+    "call crush/pickle now and send ss",\
     "drop only emote every time you type on gc/pc for 1 day.",
     "say Welcome to Who Wants To Be a Millionaire! to all the groups you have",
     "call ex saying miss",
@@ -4320,7 +4321,7 @@ case 'dare':{
     "What is the worst thing you have ever done",
     "When was the last time you cried",
     "whom do you love the most among ur parents", 
-    "do u sometimes put ur finger in ur nosetril?", 
+    "do u sometimes put ur finger in ur nosetril?", \
     "who was ur crush during the school days",
     "tell honestly, do u like any boy in this grup",
     "have you ever liked anyone? how long?",

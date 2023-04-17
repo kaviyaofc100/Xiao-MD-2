@@ -1950,7 +1950,7 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
 		let YT = require('./lib/ytdlcore')
                 let search = await yts(text)
                 let anulay = search.videos[Math.floor(Math.random() * search.videos.length)]
-		const audio = await YT.mp3(anulay)
+		const audio = await YT.mp3(anulay.url)
                 let buttonMessage = {
                     image: { url: anulay.thumbnail },
                     caption: `
@@ -1968,7 +1968,7 @@ ${themeemoji} Url : ${anulay.url}`,
                     headerType: 4
                 }
                 NEXUS.sendMessage(m.chat, buttonMessage, { quoted: m })
-	   	NEXUS.sendMessage(from, {audio: fs.readFileSync(audio.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
+	   	NEXUS.sendMessage(from, {audio: fs.readFileSync(audio.path),fileName: anulay.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
             }
             break
 

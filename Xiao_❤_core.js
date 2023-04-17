@@ -1971,8 +1971,6 @@ ${themeemoji} Url : ${anulay.url}`,
 	   	NEXUS.sendMessage(from, {audio: fs.readFileSync(audio.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
             }
             break
-}
-break
 
  case 'Playvideo': case 'getvideo': case 'ytvideo': case 'ytmp4': {
     reply(`Getting ready your 𝘃𝗶𝗱𝗲𝗼 ${pushname}_`)

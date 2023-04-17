@@ -4185,7 +4185,7 @@ case 'dare':{
               const dare =[
     "eat 2 tablespoons of rice without any side dishes, if it's dragging you can drink",
     "spill people who make you pause",
-    "call crush/pickle now and send ss",\
+    "call crush/pickle now and send ss",
     "drop only emote every time you type on gc/pc for 1 day.",
     "say Welcome to Who Wants To Be a Millionaire! to all the groups you have",
     "call ex saying miss",

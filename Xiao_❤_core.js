@@ -142,6 +142,7 @@ const pushname = m.pushName || "No Name"
 const botNumber = await NEXUS.decodeJid(NEXUS.user.id)
 const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const itsMe = m.sender == botNumber ? true : false
+const itsqMe =  m.quoted ? m.quoted: botNumber
 const text = q = args.join(" ")
 const quoted = m.quoted ? m.quoted : m
 const mime = (quoted.msg || quoted).mimetype || ''
@@ -318,7 +319,7 @@ const hsjdh = randomNomor(5)
 }
 	    
 //////////////////////////////////////////////
-if (!budy){
+if (!itsqMe){
     const botreply = await axios.get(`http://api.brainshop.ai/get?bid=173534&key=Gnb7EUxsV21uoNMM&uid=[uid]&msg=[${budy}]`)
     let txt = `${botreply.data.cnt}`
     m.reply(txt)

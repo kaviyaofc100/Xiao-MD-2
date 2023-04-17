@@ -129,6 +129,7 @@ if (global.mess == 'AR') endLimit = "انتهت صلاحية الحد اليوم
 					    
 let Xysticker = JSON.parse(fs.readFileSync('./Xiao-❤-Media/sticker/sticker.json'));
 let Xyaudio = JSON.parse(fs.readFileSync('./Xiao-❤-Media/audio/audio.json'));
+let emoteaa = JSON.parse(fs.readFileSync('./Xiao-❤-Media/audio/emote.json'));
 module.exports = NEXUS = async (NEXUS, m, chatUpdate, store) => {
     try {
 var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
@@ -156,6 +157,8 @@ const gclist = anulistg.length
 const content = JSON.stringify(mek.message)
 let allmenureact = ['🐦','🐤','🍒','📃','🎃','📑','🗞️','🔥','❤️','❤️‍🩹','👿','💙','✌','☕','🍜']
 let allmenureactemoji = pickRandom(allmenureact)
+let emotemenu = ['🐦','🐤','🍒','👑','🎃','😀','🐯','🔥','❤️','🤧','💀','😁','😎','☕','😂']
+let mreactemoji = pickRandom(emotemenu)
 const botloading = [ '■■□□20%','■■■□□30%','■■■■□□40%','■■■■■□□50%','■■■■■■□□60%','■■■■■■■□□70%','■■■■■■■■□□80%','■■■■■■■■■□□90%','■■■■■■■■■■■■■■■■■100%']
 const loading = pickRandom(botloading)
 const cekUser = (users, id) => {     
@@ -315,13 +318,13 @@ const hsjdh = randomNomor(5)
 }
 	    
 //////////////////////////////////////////////
-if(!isCmd && !quoted == botNumber) {
-const botreply = await axios.get(`http://api.brainshop.ai/get?bid=173534&key=Gnb7EUxsV21uoNMM&uid=[uid]&msg=${budy}`)
-let txt = `${botreply.data.cnt}`
-m.reply(txt)
-}
+if (!isCmd && !m.isGroup){
+    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=173534&key=Gnb7EUxsV21uoNMM&uid=[uid]&msg=[${budy}]`)
+    let txt = `${botreply.data.cnt}`
+    m.reply(txt)
+    }
 // total hit
- global.hit = {}
+global.hit = {}
 if (isCmd) {
 data = await fetchJson('https://api.countapi.xyz/hit/Xiao-MD/visits')
 jumlahcmd = `${data.value}`
@@ -333,8 +336,8 @@ jumlahharian = `${dataa.value}`
 const prem1 = `Hi bro  ${pushname} ${ucapanWaktu} \n\nThis feature is for premium members only, please buy premium to use this feature`
 const prem2 = `Click the button below to buy premium`
 const prem3 = [{buttonId: `${prefix}buypreim`,buttonText: {displayText: `BUY PREMIUM`,},type: 1,},]
-blomdaftar = `${ucapanWaktu} @${sender.split("@")[0]} Kamu belum terdaftar di database cek private message mu untuk mendaftar`
-limitabis = `*[YOUR LIMIT IS EXPIRED]*\nBuy limit in❤️‍🔥${prefix}buylimit or buy premium to get unlimited limit`
+const blomdaftar = `${ucapanWaktu} @${sender.split("@")[0]} Kamu belum terdaftar di database cek private message mu untuk mendaftar`
+let limitabis = `*[YOUR LIMIT IS EXPIRED]*\nBuy limit in❤️‍🔥${prefix}buylimit or buy premium to get unlimited limit`
 
 //WARRRRRRR
 const doc = { 
@@ -730,6 +733,11 @@ if (isCreator) return m.reply(bvl)
 NEXUS.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
+
+for (let anju of emoteaa ){
+	if (budy === anju){
+		NEXUS.sendMessage(from, { react: { text: `${mreactemoji}`, key: m.key }})     
+		}
 
         //auto reply by X
   if (Autoreply)
@@ -3655,7 +3663,167 @@ case 'report': case 'bug': {
             await NEXUS.sendButtonText(m.chat,  akhji, botname, m, {mentions: ments})
             }
             break
-case 'sound': {
+case 'sound1':
+case 'sound2':
+case 'sound3':
+case 'sound4':
+case 'sound5':
+case 'sound6':
+case 'sound7':
+case 'sound8':
+case 'sound9':
+case 'sound10':
+case 'sound11':
+case 'sound12':
+case 'sound13':
+case 'sound14':
+case 'sound15':
+case 'sound16':
+case 'sound17':
+case 'sound18':
+case 'sound19':
+case 'sound20':
+case 'sound21':
+case 'sound22':
+case 'sound23':
+case 'sound24':
+case 'sound25':
+case 'sound26':
+case 'sound27':
+case 'sound28':
+case 'sound29':
+case 'sound30':
+case 'sound31':
+case 'sound32':
+case 'sound33':
+case 'sound34':
+case 'sound35':
+case 'sound36':
+case 'sound37':
+case 'sound38':
+case 'sound39':
+case 'sound40':
+case 'sound41':
+case 'sound42':
+case 'sound43':
+case 'sound44':
+case 'sound45':
+case 'sound46':
+case 'sound47':
+case 'sound48':
+case 'sound49':
+case 'sound50':
+case 'sound51':
+case 'sound52':
+case 'sound53':
+case 'sound54':
+case 'sound55':
+case 'sound56':
+case 'sound57':
+case 'sound58':
+case 'sound59':
+case 'sound60':
+case 'sound61':
+case 'sound62':
+case 'sound63':
+case 'sound64':
+case 'sound65':
+case 'sound66':
+case 'sound67':
+case 'sound68':
+case 'sound69':
+case 'sound70':
+case 'sound71':
+case 'sound72':
+case 'sound73':
+case 'sound74':
+case 'sound75':
+case 'sound76':
+case 'sound77':
+case 'sound78':
+case 'sound79':
+case 'sound80':
+case 'sound81':
+case 'sound82':
+case 'sound83':
+case 'sound84':
+case 'sound85':
+case 'sound86':
+case 'sound87':
+case 'sound88':
+case 'sound89':
+case 'sound90':
+case 'sound91':
+case 'sound92':
+case 'sound93':
+case 'sound94':
+case 'sound95':
+case 'sound96':
+case 'sound97':
+case 'sound98':
+case 'sound99':
+case 'sound100':
+case 'sound101':
+case 'sound102':
+case 'sound103':
+case 'sound104':
+case 'sound105':
+case 'sound106':
+case 'sound107':
+case 'sound108':
+case 'sound109':
+case 'sound110':
+case 'sound111':
+case 'sound112':
+case 'sound113':
+case 'sound114':
+case 'sound115':
+case 'sound116':
+case 'sound117':
+case 'sound118':
+case 'sound119':
+case 'sound120':
+case 'sound121':
+case 'sound122':
+case 'sound123':
+case 'sound124':
+case 'sound125':
+case 'sound126':
+case 'sound127':
+case 'sound128':
+case 'sound129':
+case 'sound130':
+case 'sound131':
+case 'sound132':
+case 'sound133':
+case 'sound134':
+case 'sound135':
+case 'sound136':
+case 'sound137':
+case 'sound138':
+case 'sound139':
+case 'sound140':
+case 'sound141':
+case 'sound142':
+case 'sound143':
+case 'sound144':
+case 'sound145':
+case 'sound146':
+case 'sound147':
+case 'sound148':
+case 'sound149':
+case 'sound150':
+case 'sound151':
+case 'sound152':
+case 'sound153':
+case 'sound154':
+case 'sound155':
+case 'sound156':
+case 'sound157':
+case 'sound158':
+case 'sound159':
+case 'sound160':
+case 'sound161': {
 if(!text) throw `example: ${prefix + command} sound 12`
 const NEXUS_dev = await getBuffer(`https://github.com/NEXUSAT12/Tiktokmusic-API/raw/master/tiktokmusic/sound${text}.mp3`)
 await NEXUS.sendMessage(m.chat, { audio: NEXUS_dev, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
@@ -4433,8 +4601,8 @@ break
 case 'animewallpaper': case 'animewall': {
                 if (!args.join(" ")) return m.reply("What wallpaper are you looking for??")
 		let { wallpaper } = require('./lib/scraperW')
-                anu = await wallpaper(args)
-                result = anu[Math.floor(Math.random() * anu.length)]
+                let anu = await wallpaper(args)
+                let result = anu[Math.floor(Math.random() * anu.length)]
 		let buttons = [
                     {buttonId: `.wallpaper ${args.join(" ")}`, buttonText: {displayText: 'Next Image'}, type: 1}
                 ]
@@ -5661,15 +5829,15 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 NEXUS.sendMessage(from, { react: { text: `${allmenureactemoji}`, key: m.key }})
 let teks = `*◯───────[ 𝐒𝐘𝐒𝐓𝐄𝐌 𝐌𝐄𝐍𝐔 ]───────◯*
 
-╭⛒  *ＯＷＮＥＲ* : ${ownername}
-├⛒  *ＯＷＮＥＲ ＴＡＧ* : @${ownernya.split('@')[0]}
-├⛒  *ＧＲＯＵＰ* : ${gclist}
-├⛒  *ＲＥＳＰＯＮＳＥ* : ${ping}
-├⛒  *ＴＩＭＥ* : ${bottime}
-╰⛒  *​​Ｕｓｅｒｓ* : ${pclist}
+╭⛒ *ＯＷＮＥＲ* : ${ownername}
+├⛒ *ＯＷＮＥＲ ＴＡＧ* : @${ownernya.split('@')[0]}
+├⛒ *ＧＲＯＵＰ* : ${gclist}
+├⛒ *ＲＥＳＰＯＮＳＥ* : ${ping}
+├⛒ *ＴＩＭＥ* : ${bottime}
+╰⛒ *​​Ｕｓｅｒｓ* : ${pclist}
 
-╭──────────[  𝐌𝐄𝐍𝐔 ]───────────╮
-│╭──────────────────────────────╯
+╭──────────[  𝐌𝐄𝐍𝐔 ]
+│
 │├⛒ ${prefix}*OWNERMENU*      
 │├⛒ ${prefix}*GROUPMENU*
 │├⛒ ${prefix}*MAKERMENU*
@@ -5690,8 +5858,8 @@ let teks = `*◯───────[ 𝐒𝐘𝐒𝐓𝐄𝐌 𝐌𝐄𝐍𝐔
 │├⛒ ${prefix}*FUNMENU*
 │├⛒ ${prefix}*IMAGEEFFECTMENU*
 │├⛒ ${prefix}*thanksto*
-│╰───────────────────────────╮
-╰───────[ ${botname} ]───────╯`
+│
+╰───────[ ${botname} ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`
 let buttonMessage = {
 document: fs.readFileSync('./Xiao-❤-Media/XBOT.xlsx'),
 mimetype: docs,
@@ -5869,12 +6037,12 @@ case 'qr': case 'qrcode': {
 	   var unicorn = await getBuffer(picak+'Owner Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝚘𝚠𝚗𝚎𝚛 𝚖𝚎𝚗𝚞  ]───────◯*	
-│╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
-│├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
-│╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+    caption: `╭───────[ 𝚘𝚠𝚗𝚎𝚛 𝚖𝚎𝚗𝚞  ]
+│╭⛒ *ᴏᴡɴᴇʀ* ${ownername}
+│├⛒ *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+│╰⛒ *ᴛɪᴍᴇ* ${bottime}
+╰─────────────╍╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝚂𝚎𝚕𝚏
 │❐${prefix}𝙿𝚞𝚋𝚕𝚒𝚌
@@ -5892,7 +6060,7 @@ const buttonMessage = {
 │❐${prefix}𝚀𝚁 [ 𝙰𝚃𝚃𝙰𝙲𝙷 𝙱𝙾𝚃 ] 
 │❐${prefix}𝙾𝚠𝚗𝚎𝚛𝚙𝚛𝚘 [𝚃𝙾 𝙼𝙰𝙺𝙴 𝙾𝚆𝙽𝙴𝚁 𝙰𝙳𝙼𝙸𝙽]
 │
-╰───────[ ${botname} ]───────◯*`,
+╰───────[ ${botname} ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: ` 𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -5904,12 +6072,12 @@ var unicorn = await getBuffer(picak+'Group Menu')
 NEXUS.sendMessage(from, { react: { text: `${allmenureactemoji}`, key: m.key }})
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝙶𝚁𝙾𝚄𝙿 𝙼𝙴𝙽𝚄 ]───────◯*	  
-│╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
-│├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
-│╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+    caption: `╭───────[ 𝙶𝚁𝙾𝚄𝙿 𝙼𝙴𝙽𝚄 ]
+│╭⛒ *ᴏᴡɴᴇʀ* ${ownername}
+│├⛒ *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+│╰⛒ *ᴛɪᴍᴇ* ${bottime}
+╰─────────────╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝙶𝚛𝚘𝚞𝚙𝚕𝚒𝚗𝚔
 │❐${prefix}𝙱𝚘𝚝 [𝚃𝚘 𝚌𝚑𝚊𝚝]
@@ -5952,7 +6120,7 @@ const buttonMessage = {
 │❐${prefix}𝙲𝚑𝚎𝚌𝚔𝚟𝚘𝚝𝚎
 │❐${prefix}𝙳𝚎𝚕𝚟𝚘𝚝𝚎
 │ 
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname} ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -5963,10 +6131,10 @@ case 'makermenu':{
 var unicorn = await getBuffer(picak+'Maker Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝙻𝙾𝙶𝙾 𝙼𝙴𝙽𝚄 ]───────◯*	
-│ ╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
-│ ├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
-│ ╰⛒  *ᴛɪᴍᴇ* ${bottime}
+    caption: `╭───────[ 𝙻𝙾𝙶𝙾 𝙼𝙴𝙽𝚄 ]
+│ ╭⛒ *ᴏᴡɴᴇʀ* ${ownername}
+│ ├⛒ *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+│ ╰⛒ *ᴛɪᴍᴇ* ${bottime}
 ╰────────────╍╍╍╍╍╍╍╍╮
 ╭────────────╍╍╍╍╍╍╍╍╯
 │
@@ -6076,7 +6244,7 @@ const buttonMessage = {
 │❐${prefix}𝚆𝚊𝚝𝚎𝚛𝚌𝚘𝚕𝚘𝚛
 │❐${prefix}𝙲𝚕𝚊𝚜𝚜𝚒𝚌
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname} ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6087,12 +6255,12 @@ break
 var unicorn = await getBuffer(picak+'Download Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄  ]───────◯*	  
+    caption: `╭───────[ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄  ]
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯	
+╰────────────╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╯	
 │
 │❐${prefix}𝚃𝚒𝚔𝚝𝚘𝚔 [𝚄𝚛𝚕]
 │❐${prefix}𝚃𝚒𝚔𝚝𝚘𝚔𝚊𝚞𝚍𝚒𝚘 [𝚄𝚛𝚕]
@@ -6103,7 +6271,7 @@ const buttonMessage = {
 │❐${prefix}𝚈𝚝𝚖𝚙4 [𝚄𝚛𝚕|𝚀𝚞𝚊𝚕𝚒𝚝𝚢]
 │❐${prefix}𝙶𝚒𝚝𝚌𝚕𝚘𝚗𝚎 [𝚁𝚎𝚙𝚘 𝙻𝚒𝚗𝚔]
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6114,12 +6282,12 @@ break
 var unicorn = await getBuffer(picak+'Search Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝚂𝙴𝙰𝚁𝙲𝙷 𝙼𝙴𝙽𝚄 ]───────◯*	
+    caption: `╭───────[ 𝚂𝙴𝙰𝚁𝙲𝙷 𝙼𝙴𝙽𝚄 ]
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+╰─────────────╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝙿𝚕𝚊𝚢 [𝚀𝚞𝚎𝚛𝚢]
 │❐${prefix}𝚂𝚘𝚗𝚐 [𝚀𝚞𝚎𝚛𝚢]
@@ -6140,7 +6308,7 @@ const buttonMessage = {
 │❐${prefix}𝚈𝚝𝚜𝚎𝚊𝚛𝚌𝚑 [𝚀𝚞𝚎𝚛𝚢]
 │❐${prefix}𝚁𝚒𝚗𝚐𝚝𝚘𝚗𝚎 [𝚀𝚞𝚎𝚛𝚢]
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6151,12 +6319,12 @@ break
 var unicorn = await getBuffer(picak+'Convert Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝙲𝙾𝙽𝚅𝙴𝚁𝚃 𝙼𝙴𝙽𝚄  ]───────◯*	  
+    caption: `╭───────[ 𝙲𝙾𝙽𝚅𝙴𝚁𝚃 𝙼𝙴𝙽𝚄  ]
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+╰─────────────╍╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝚃𝚘𝚒𝚖𝚊𝚐𝚎 [𝚁𝚎𝚙𝚕𝚢 𝚂𝚝𝚒𝚌𝚔]
 │❐${prefix}𝚂𝚝𝚒𝚌𝚔𝚎𝚛 [𝚁𝚎𝚙𝚕-𝚢 𝙸𝚖𝚐|𝙶𝚒𝚏]
@@ -6187,7 +6355,7 @@ const buttonMessage = {
 │❐${prefix}𝚂𝚖𝚘𝚘𝚝𝚑 [𝚁𝚎𝚙𝚕𝚢 𝙰𝚞𝚍]
 │❐${prefix}𝚂𝚚𝚞𝚒𝚛𝚛𝚎𝚕 [𝚁𝚎𝚙𝚕𝚢 𝙰𝚞𝚍]
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6198,12 +6366,12 @@ case 'randomimagemenu':{
 var unicorn = await getBuffer(picak+'Random Image Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝚁𝙰𝙽𝙳𝙾𝙼 𝙼𝙴𝙽𝚄 ]───────◯*	   
-│╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
-│├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
-│╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+    caption: `╭───────[ 𝚁𝙰𝙽𝙳𝙾𝙼 𝙼𝙴𝙽𝚄 ]
+│╭⛒ *ᴏᴡɴᴇʀ* ${ownername}
+│├⛒ *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+│╰⛒ *ᴛɪᴍᴇ* ${bottime}
+╰─────────────╍╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝙲𝚘𝚏𝚏𝚎𝚎
 │❐${prefix}𝚆𝚘𝚘𝚏
@@ -6244,7 +6412,7 @@ const buttonMessage = {
 │❐${prefix}𝚆𝚊𝚕𝚕𝚖𝚕
 │❐${prefix}BŢŞ
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6255,12 +6423,12 @@ case 'randomvideomenu':{
 var unicorn = await getBuffer(picak+'Random Video Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝚁𝙰𝙽𝙳𝙾𝙼 𝚅𝙸𝙳𝙴𝙾 𝙼𝙴𝙽𝚄 ]───────◯   
+    caption:`╭───────[ 𝚁𝙰𝙽𝙳𝙾𝙼 𝚅𝙸𝙳𝙴𝙾 𝙼𝙴𝙽𝚄 ]
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+╰─────────────╍╍╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝚃𝚒𝚔𝚝𝚘𝚔𝚐𝚒𝚛𝚕	
 │❐${prefix}𝚃𝚒𝚔𝚝𝚘𝚔𝚗𝚞𝚔𝚑𝚝𝚢
@@ -6271,7 +6439,7 @@ const buttonMessage = {
 │❐${prefix}𝚃𝚒𝚔𝚝𝚘𝚔𝚜𝚊𝚗𝚝𝚞𝚢
 │❐${prefix}𝚃𝚒𝚔𝚝𝚘𝚔𝚋𝚘𝚌𝚒𝚕
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6282,13 +6450,12 @@ break
 var unicorn = await getBuffer(picak+'Emote Menu')
 const buttonMessage = { 
     image: unicorn,
-    caption: `
-╭───────[ 𝙴𝙼𝙾𝚃 𝙼𝙴𝙽𝚄  ]───────◯*	  
-│╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
-│├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
-│╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+    caption: `╭───────[ 𝙴𝙼𝙾𝚃 𝙼𝙴𝙽𝚄  ]	  
+│╭⛒ *ᴏᴡɴᴇʀ* ${ownername}
+│├⛒ *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+│╰⛒ *ᴛɪᴍᴇ* ${bottime}
+╰─────────────╍╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝙸𝚗𝚜𝚝𝚊𝚐𝚛𝚊𝚖𝚎𝚖𝚘𝚓𝚒
 │❐${prefix}𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔𝚎𝚖𝚘𝚓𝚒
@@ -6303,7 +6470,7 @@ const buttonMessage = {
 │❐${prefix}𝙿𝚎𝚍𝚒𝚊𝚎𝚖𝚘𝚓𝚒
 │❐${prefix}𝙼𝚒𝚌𝚛𝚘𝚜𝚘𝚏𝚝𝚎𝚖𝚘𝚓𝚒
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_}`,
     headerType: 4
 }
@@ -6315,16 +6482,16 @@ var unicorn = await getBuffer(picak+'Image Effect Menu')
 const buttonMessage = {
     image: unicorn,
     caption: `
-╭───────[ 𝙾𝚆𝙽𝙴𝚁 𝙼𝙴𝙽𝚄 ]───────◯*	
-│╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
-│├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
-│╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+╭───────[ 𝙾𝚆𝙽𝙴𝚁 𝙼𝙴𝙽𝚄 ]	
+│╭⛒ *ᴏᴡɴᴇʀ* ${ownername}
+│├⛒ *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+│╰⛒ *ᴛɪᴍᴇ* ${bottime}
+╰───────────╍┅┅┅╮
+╭───────────╍╍╍╍╯
 │
 │❐${prefix}𝚁𝚎𝚖𝚘𝚟𝚎𝚋𝚐 [𝚁𝚎𝚙𝚕𝚢 𝙸𝚖𝚐]
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6335,7 +6502,7 @@ case 'animemenu':{
 var unicorn = await getBuffer(picak+'Anime Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝙰𝙽𝙸𝙼𝙴 𝙼𝙴𝙽𝚄 ]───────◯*	
+    caption: `╭───────[ 𝙰𝙽𝙸𝙼𝙴 𝙼𝙴𝙽𝚄 ]
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
@@ -6394,7 +6561,7 @@ const buttonMessage = {
 │❐${prefix}𝙰𝚗𝚒𝚖𝚎𝚠𝚊𝚕𝚕 [𝚀𝚞𝚎𝚛𝚢]
 │❐${prefix}𝙰𝚗𝚒𝚖𝚎𝚠𝚊𝚕𝚕2 [𝚀𝚞𝚎𝚛𝚢]
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6405,7 +6572,7 @@ break
 var unicorn = await getBuffer(picak+'Sticker Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝚂𝚃𝙸𝙲𝙺𝙴𝚁 𝙼𝙴𝙽𝚄  ]───────◯*	
+    caption: `╭───────[ 𝚂𝚃𝙸𝙲𝙺𝙴𝚁 𝙼𝙴𝙽𝚄  ]
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
@@ -6424,7 +6591,7 @@ const buttonMessage = {
 │❐${prefix}𝙲𝚊𝚛𝚝𝚘𝚘𝚗
 │❐${prefix}𝚂𝚝𝚒𝚌𝚔𝚖𝚊𝚗
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6435,7 +6602,7 @@ case 'animestickermenu':{
 var unicorn = await getBuffer(picak+'Anime Sticker Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝙰𝙽𝙸𝙼𝙴 𝚂𝚃𝙸𝙲𝙺𝙴𝚁 𝙼𝙴𝙽𝚄  ]───────◯*	
+    caption: `╭───────[ 𝙰𝙽𝙸𝙼𝙴 𝚂𝚃𝙸𝙲𝙺𝙴𝚁 𝙼𝙴𝙽𝚄  ]*	
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
@@ -6472,7 +6639,7 @@ const buttonMessage = {
 │❐${prefix}𝙽𝚎𝚔𝚘
 │❐${prefix}𝙶𝚞𝚛𝚊
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6483,7 +6650,7 @@ case 'funmenu':{
 var unicorn = await getBuffer(picak+'Fun Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝙵𝚄𝙽 𝙼𝙴𝙽𝚄 ]───────◯*	
+    caption: `╭───────[ 𝙵𝚄𝙽 𝙼𝙴𝙽𝚄 ]
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
@@ -6566,7 +6733,7 @@ const buttonMessage = {
 │❐${prefix}𝙿𝚕𝚊𝚢𝚐𝚒𝚛𝚕
 │❐${prefix}𝚀𝚞𝚘𝚝𝚎𝚜
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname} ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6577,7 +6744,7 @@ case 'soundmenu':{
 var unicorn = await getBuffer(picak+'Sound Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝚂𝙾𝚄𝙽𝙳 𝙼𝙴𝙽𝚄  ]───────◯*	 
+    caption: `╭───────[ 𝚂𝙾𝚄𝙽𝙳 𝙼𝙴𝙽𝚄  ]*
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
@@ -6585,7 +6752,7 @@ const buttonMessage = {
 ╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝚂𝚘𝚞𝚗𝚍1
-│❐${prefix}𝚂𝚘𝚞𝚗𝚍2
+│❐${prefix}𝚂𝚘𝚞𝚗𝚍
 │❐${prefix}𝚂𝚘𝚞𝚗𝚍3
 │❐${prefix}𝚂𝚘𝚞𝚗𝚍4
 │❐${prefix}𝚂𝚘𝚞𝚗𝚍5
@@ -6746,7 +6913,7 @@ const buttonMessage = {
 │❐${prefix}𝚂𝚘𝚞𝚗𝚍160
 │❐${prefix}𝚂𝚘𝚞𝚗𝚍161
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6757,7 +6924,7 @@ case 'gamemenu':{
 var unicorn = await getBuffer(picak+'Game Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭───────[ 𝙶𝙰𝙼𝙴 𝙼𝙴𝙽𝚄  ]───────◯*	    
+    caption: `╭───────[ 𝙶𝙰𝙼𝙴 𝙼𝙴𝙽𝚄  ]*	    
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
@@ -6772,7 +6939,7 @@ const buttonMessage = {
 │❐${prefix}𝙼𝚊𝚝𝚑 [𝙼𝚘𝚍𝚎]
 │❐${prefix}𝚂𝚞𝚒𝚝𝚙𝚟𝚙 [𝚃𝚊𝚐]
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6783,19 +6950,19 @@ break
 var unicorn = await getBuffer(picak+'Anonymous Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────[ 𝙰𝙽𝙾𝙽𝚈𝙼𝙾𝚄𝚂 𝙼𝙴𝙽𝚄 ]──────◯*
+    caption: `╭─────[ 𝙰𝙽𝙾𝙽𝚈𝙼𝙾𝚄𝚂 𝙼𝙴𝙽𝚄 ]*
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+╰─────────────╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝙰𝚗𝚘𝚗𝚢𝚖𝚘𝚞𝚜
 │❐${prefix}𝚂𝚝𝚊𝚛𝚝
 │❐${prefix}𝙽𝚎𝚡𝚝
 │❐${prefix}𝙻𝚎𝚊𝚟𝚎
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `$𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6806,12 +6973,12 @@ case 'databasemenu':{
 var unicorn = await getBuffer(picak+'Database Menu')
 const buttonMessage = {
     image: unicorn,
-    caption: `╭──────[ 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 𝙼𝙴𝙽𝚄 ]───────◯*	
-│╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
-│├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
-│╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+    caption: `╭──────[ 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 𝙼𝙴𝙽𝚄 ]*
+│╭⛒ *ᴏᴡɴᴇʀ* ${ownername}
+│├⛒ *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
+│╰⛒ *ᴛɪᴍᴇ* ${bottime}
+╰─────────────╍╍╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╍╍╯
 │
 │❐${prefix}𝚂𝚎𝚝𝚌𝚖𝚍
 │❐${prefix}𝙻𝚒𝚜𝚝𝚌𝚖𝚍
@@ -6822,7 +6989,7 @@ const buttonMessage = {
 │❐${prefix}𝙶𝚎𝚝𝚖𝚜𝚐
 │❐${prefix}𝙳𝚎𝚕𝚖𝚜𝚐
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }
@@ -6833,12 +7000,12 @@ case 'othermenu':{
 var unicorn = await getBuffer(picak+'Other Menu')
 const Message = {
     image: unicorn,
-    caption: `╭───────[ 𝙾𝚃𝙷𝙴𝚁 𝙼𝙴𝙽𝚄  ]───────◯*	    
+    caption: `╭───────[ 𝙾𝚃𝙷𝙴𝚁 𝙼𝙴𝙽𝚄  ]*
 │╭⛒  *ᴏᴡɴᴇʀ* ${ownername}
 │├⛒  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
 │╰⛒  *ᴛɪᴍᴇ* ${bottime}
-╰─────────────╍╍╍╍╍╍╍╍╍╍┅┅┅╮
-╭─────────────╍╍╍╍╍╍╍╍╍╍╍╍╍╯
+╰─────────────╍╍┅┅┅╮
+╭─────────────╍╍╍╍╍╯
 │
 │❐${prefix}𝚊𝚏𝚔
 │❐${prefix}𝚒𝚍
@@ -6861,7 +7028,7 @@ const Message = {
 │❐${prefix}𝚛𝚎𝚚𝚞𝚎𝚜𝚝
 │❐${prefix}𝚛𝚎𝚙𝚘𝚛𝚝 [𝚋𝚞𝚐]
 │
-╰───────[ ${botname}  ]───────◯*	`,
+╰───────[ ${botname}  ]*\n𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     footer: `𝙍𝙖𝙩𝙚 𝙤𝙛 ${botname}\n➥${loading}__*ᗰᗩ᙭*_`,
     headerType: 4
 }

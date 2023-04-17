@@ -4321,7 +4321,7 @@ case 'dare':{
     "What is the worst thing you have ever done",
     "When was the last time you cried",
     "whom do you love the most among ur parents", 
-    "do u sometimes put ur finger in ur nosetril?", \
+    "do u sometimes put ur finger in ur nosetril?", 
     "who was ur crush during the school days",
     "tell honestly, do u like any boy in this grup",
     "have you ever liked anyone? how long?",

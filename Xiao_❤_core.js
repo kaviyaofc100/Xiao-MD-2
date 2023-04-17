@@ -733,11 +733,11 @@ if (isCreator) return m.reply(bvl)
 NEXUS.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
-
 for (let anju of emoteaa ){
 	if (budy === anju){
 		NEXUS.sendMessage(from, { react: { text: `${mreactemoji}`, key: m.key }})     
 		}
+}
 
         //auto reply by X
   if (Autoreply)

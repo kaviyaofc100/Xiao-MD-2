@@ -1944,18 +1944,33 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
             }
             break
         
-    case 'play': case 'ytplay':{
+   case 'play': case 'ytplay':{
                 if (!text) throw `Example : ${prefix + command} anime whatsapp status`
-                reply(` Getting  your 𝗮𝘂𝗱𝗶𝗼 ${pushname}_`)
-    		const YT= require('./lib/ytdlcore')
-    		let yts = require("youtube-yts")
-    		let search = await yts(text)
-    		let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-    		const ytmp3play = await YT.mp3(anu.url)
-    		let stats = fs.statSync(ytmp3play.path)
-    		let fileSizeInBytes = stats.size;
-    		if (fileSizeInBytes > 60000000) return reply('Cant send audios longer than 60 MB!')
- 		NEXUS.sendMessage(from, {audio: fs.readFileSync(ytmp3play.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
+                let yts = require("youtube-yts")
+		let YT = require('./lib/ytdlcore')
+                let search = await yts(text)
+                let anulay = search.videos[Math.floor(Math.random() * search.videos.length)]
+		const audio = await YT.mp3(anulay)
+                let buttonMessage = {
+                    image: { url: anulay.thumbnail },
+                    caption: `
+${themeemoji} Title : ${anulay.title}
+${themeemoji} Ext : Search
+${themeemoji} ID : ${anulay.videoId}
+${themeemoji} Duration : ${anulay.timestamp}
+${themeemoji} Viewers : ${anulay.views}
+${themeemoji} Upload At : ${anulay.ago}
+${themeemoji} Author : ${anulay.author.name}
+${themeemoji} Channel : ${anulay.author.url}
+${themeemoji} Description : ${anulay.description}
+${themeemoji} Url : ${anulay.url}`,
+                    footer: `${botname}`,
+                    headerType: 4
+                }
+                NEXUS.sendMessage(m.chat, buttonMessage, { quoted: m })
+	   	NEXUS.sendMessage(from, {audio: fs.readFileSync(audio.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
+            }
+            break
 }
 break
 

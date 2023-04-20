@@ -5,9 +5,9 @@ RUN sudo dnf -y update &&\
     sudo dnf install -y git ffmpeg ImageMagick nodejs yarnpkg libwebp &&\
     sudo dnf clean all -y
 
-WORKDIR /XIAO
+WORKDIR /Xiao-MD-2
 
-COPY . /XIAO
+COPY ./Xiao-MD-2
 
 RUN yarn
 

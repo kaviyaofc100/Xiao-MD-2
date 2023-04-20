@@ -142,7 +142,7 @@ const pushname = m.pushName || "No Name"
 const botNumber = await NEXUS.decodeJid(NEXUS.user.id)
 const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const itsMe = m.sender == botNumber ? true : false
-const itsqMe =  m.quoted ? m.quoted: botNumber
+const itsqMe =  m.quoted ? m.quoted: `9971690443@s.whatsapp.net`
 const text = q = args.join(" ")
 const quoted = m.quoted ? m.quoted : m
 const mime = (quoted.msg || quoted).mimetype || ''

@@ -14,25 +14,26 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-global.owner = (process.env.OWNER_NUNBER || "").split(",").map((number) => `${number}@s.whatsapp.net`)
-global.ownername =  process.env.OWNER_NAME || 'NEXUS' 
+global.owner = ['918130784851']
+
+global.ownername = ":_-_:MASTER-NEXUS_-_:"
 global.ytname = "YT: NEXUSMODS" //ur yt chanel name
 global.socialm = "GitHub: NEXUSAT12" //ur github or insta name
 global.location = "India, Ghaziabad, Rajnagar" //ur location
 
 //bot bomdy 
-global.ownernomer =  (process.env.SUDO || "").split(",").map((number) => `${number}@s.whatsapp.net`), //ur number
+global.ownernomer =  ['918130784851']
 global.premium = ['918130784851'] //ur premium number
-global.botname = process.env.BOT_NAME || '𓆩⍣⃝🇽‌𝐢𝐚𝐨-𝐁𝐎𝐓⃢𓆪' //ur bot name
-global.linkz = process.env.GROUPLINK || 'https://chat.whatsapp.com/KdCiUuENgOFEYJMHV3jZNj' //your theme url which will be displayed on whatsapp
+global.botname = "𓆩⍣⃝🇽‌𝐢𝐚𝐨-𝐁𝐎𝐓⃢𓆪"//ur bot name
+global.linkz = "https://chat.whatsapp.com/KdCiUuENgOFEYJMHV3jZNj"//your theme url which will be displayed on whatsapp
 global.websitex = "https://nexus21.carrd.co/" //ur website to be displayed
 global.botscript = 'https://github.com/NEXUSAT12/Xiao-MD-2' //script link
 global.themeemoji = "🌹" //ur theme emoji
-global.packname = process.env.PACKNAME || ' ☤꙰𝙈𝘼𝙎𝙏𝙀𝙍꥟𝙉𝙀𝙓𝙐𝙎☤꙰ '//ur sticker  packname
-global.author = process.env.STICKER_AUTHOUR || ' ☤꙰𝙈𝘼𝙎𝙏𝙀𝙍꥟𝙉𝙀𝙓𝙐𝙎☤꙰ ' //ur sticker author
-global.wm = process.env.WATERMARK || ' ☤꙰𝙈𝘼𝙎𝙏𝙀𝙍꥟𝙉𝙀𝙓𝙐𝙎☤꙰ '//ur watermark
-global.mess = process.env.LANGUAGE || 'EN'
-global.BOT_LANGUAGE = "EN"
+global.packname = '☤꙰𝙈𝘼𝙎𝙏𝙀𝙍꥟𝙉𝙀𝙓𝙐𝙎☤꙰ '//ur sticker  packname
+global.author = '☤꙰𝙈𝘼𝙎𝙏𝙀𝙍꥟𝙉𝙀𝙓𝙐𝙎☤꙰ ' //ur sticker author
+global.wm = '☤꙰𝙈𝘼𝙎𝙏𝙀𝙍꥟𝙉𝙀𝙓𝙐𝙎☤꙰ '//ur watermark
+global.mess = 'EN'
+
 // Other
 global.sessionName = 'session'
 global.prefa = ['#']

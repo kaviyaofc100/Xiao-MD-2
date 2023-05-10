@@ -14,24 +14,24 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-global.owner = ['918130784851']
+global.owner = ['94775418384']
 
-global.ownername = ":_-_:MASTER-NEXUS_-_:"
-global.ytname = "YT: NEXUSMODS" //ur yt chanel name
-global.socialm = "GitHub: NEXUSAT12" //ur github or insta name
+global.ownername = ":_-_:*🎭🇱🇰 KAVIYA OFC 🇱🇰🎭*_-_:"
+global.ytname = "YT: kaviyaofc" //ur yt chanel name
+global.socialm = "GitHub: kaviyaofc1" //ur github or insta name
 global.location = "India, Ghaziabad, Rajnagar" //ur location
 
 //bot bomdy 
-global.ownernomer =  ['918130784851']
-global.premium = ['918130784851'] //ur premium number
-global.botname = "𓆩⍣⃝🇽‌𝐢𝐚𝐨-𝐁𝐎𝐓⃢𓆪"//ur bot name
-global.linkz = "https://chat.whatsapp.com/KdCiUuENgOFEYJMHV3jZNj"//your theme url which will be displayed on whatsapp
-global.websitex = "https://nexus21.carrd.co/" //ur website to be displayed
-global.botscript = 'https://github.com/NEXUSAT12/Xiao-MD-2' //script link
+global.ownernomer =  ['94775418384']
+global.premium = ['94775418384'] //ur premium number
+global.botname = "*🎭🇱🇰 KAVIYA OFC 🇱🇰🎭*"//ur bot name
+global.linkz = "https://chat.whatsapp.com/HW0irZWSplaE5vUWpQeRAI"//your theme url which will be displayed on whatsapp
+global.websitex = "http://kaviyaofc.website3.me/" //ur website to be displayed
+global.botscript = 'https://github.com/kaviyaofc1' //script link
 global.themeemoji = "🌹" //ur theme emoji
-global.packname = '☤꙰𝙈𝘼𝙎𝙏𝙀𝙍꥟𝙉𝙀𝙓𝙐𝙎☤꙰ '//ur sticker  packname
-global.author = '☤꙰𝙈𝘼𝙎𝙏𝙀𝙍꥟𝙉𝙀𝙓𝙐𝙎☤꙰ ' //ur sticker author
-global.wm = '☤꙰𝙈𝘼𝙎𝙏𝙀𝙍꥟𝙉𝙀𝙓𝙐𝙎☤꙰ '//ur watermark
+global.packname = 'KAVIYA OFC'//ur sticker  packname
+global.author = 'KAVIYA OFC' //ur sticker author
+global.wm = 'KAVIYA OFC'//ur watermark
 global.mess = 'EN'
 
 // Other
